@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task app</title>
+    <link rel="stylesheet" href="./styles/root.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
+    <link rel="stylesheet" href="./styles/add-task-form.css" />
+    <link rel="stylesheet" href="./styles/state.css" />
+    <link rel="stylesheet" href="./styles/mobile-view.css" />
+  </head>
+  <body>
+    <main class="page-width">
+      <div class="user-info">
+        <p>Hello, George</p>
+        <p>Here are the list of you task for today</p>
+      </div>
+
+      <section class="search-filter-section">
+        <div class="search-bar" id="searchBar">
+          <!-- Search Bar -->
+          <img src="./icons/search-icon.svg" alt="Search icon" />
+          <input
+            type="text"
+            placeholder="Filter by description.."
+            id="searchInput"
+          />
+          <img
+            src="./icons/close-icon-with-bg.svg"
+            class="close-icon"
+            id="searchClearIcon"
+            style="display: none"
+            alt=""
+          />
+        </div>
+        <div class="add-task-btn-box">
+          <button class="add-task-btn" id="addButton">+ Add Task</button>
+          <button class="add-task-icon-btn" id="addButton">
+            <span>+</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="filter-by-category">
+        <div>
+          <div>
+            <button id="filterBtn" class="filter-btn filter-btn-active">
+              All
+            </button>
+            <button id="filterBtn" class="filter-btn">Done</button>
+            <button id="filterBtn" class="filter-btn">In progress</button>
+            <button id="filterBtn" class="filter-btn">Todo</button>
+          </div>
+        </div>
+        <button class="more-filter" id="moreFilterButton">
+          <img src="../icons/filter-41.svg" width="20" height="20" alt="" />
+          <span>Filters</span>
+        </button>
+      </section>
+
+      <!-- Selected items -->
+      <section class="clear-selected" id="clearSelected">
+        <div><span id="totalSelected"> 0</span> <span>Selected</span></div>
+        <img
+          src="./icons/delete-icon.svg"
+          width="17"
+          height="17"
+          id="deleteSelectedTask"
+          alt="delete icon"
+        />
+      </section>
+
+      <!-- Date table -->
+      <div class="data-list">
+        <!-- desktop view -->
+        <table class="task-table" id="taskTable">
+          <thead>
+            <tr>
+              <th>
+                <input type="checkbox" id="selectAlCheckBox" />
+              </th>
+              <th>Description</th>
+              <th>Status</th>
+              <th>
+                <span>Date</span>
+                <button id="sortOrder" title="ascending">&#x2191;</button>
+              </th>
+              <th>Priority</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+        <!-- mobile view -->
+        <section class="mobile-view" id="mobileView"></section>
+        <!--  Empty State -->
+        <section style="display: none" class="empty-state" id="emptyState">
+          <div>
+            <img src="./icons/search-icon.svg" alt="" />
+            <h4>No Result for <span id="searchInputValue"></span></h4>
+            <p>Check the spelling or try a new search.</p>
+          </div>
+        </section>
+      </div>
+
+      <!--  Pagination  -->
+      <section class="pagination">
+        <p>
+          <span class="gray-text"> Displaying</span>
+          <b><span id="currentPage">1</span>- <span id="totalPage"></span></b
+          ><span class="gray-text" id="totalItems"> of 4</span>
+        </p>
+        <div>
+          <button id="prevButton">Previous</button>
+          <select class="selectPage" name="" id="selectPageDropdown"></select>
+
+          <button id="nextButton">Next</button>
+        </div>
+      </section>
+
+      <!-- MODALS -->
+      <div class="modal-overlay" id="addTaskModal">
+        <!--  ADD TASK MODAL -->
+        <div class="modal-content">
+          <form action="" id="addTaskForm" class="add-task-form">
+            <div class="modal-header">
+              <p class="title">Add Task</p>
+
+              <button type="button" id="addModalCloseBtn" class="close-button">
+                &#x2715;
+              </button>
+            </div>
+            <div class="input-box">
+              <label for="status-label">Select Status</label>
+              <div>
+                <button class="status-btn" id="addFormStatusBtn">Todo</button>
+                <button class="status-btn" id="addFormStatusBtn">
+                  In Progress
+                </button>
+                <button class="status-btn" id="addFormStatusBtn">Done</button>
+                <button class="status-btn" id="addFormStatusBtn">
+                  On hold
+                </button>
+              </div>
+              <p id="statusError" class="error"></p>
+            </div>
+
+            <div class="input-box">
+              <label for="date" class="date"> Select Date</label> <br />
+              <input type="date" id="date" />
+            </div>
+
+            <div class="input-box">
+              <label for="priority-label"> Select Priority</label>
+              <div>
+                <button class="priority-btn" id="addFormPriorityBtn">
+                  High
+                </button>
+                <button class="priority-btn" id="addFormPriorityBtn">
+                  Low
+                </button>
+                <button class="priority-btn" id="addFormPriorityBtn">
+                  Medium
+                </button>
+              </div>
+              <p id="priorityError" class="error"></p>
+            </div>
+
+            <div class="input-box">
+              <label for="discription">Describe your Task</label>
+              <textarea
+                name=""
+                id="taskDesc"
+                placeholder="Description..."
+              ></textarea>
+
+              <p id="descError" class="error"></p>
+            </div>
+            <div class="input-box">
+              <button class="add-task-btn" id="addTaskBtn" type="button">
+                Add Task
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

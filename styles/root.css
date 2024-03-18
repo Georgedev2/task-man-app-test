@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+  --pr-border: 1px solid #ecedee;
+  --input-height: 35px;
+  --primary-color: teal;
+  --primary-border-radius: 4px;
+  --gray-500-text: #75757a;
+}
+
+/* Common Styles */
+* {
+  font-family: 'Nunito', sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  border: var(--pr-border);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.page-width {
+  width: 80%;
+  margin: 30px auto;
+}
+
+/*  page title */
+.user-info p:nth-child(1) {
+  font-size: 25px;
+}
+.user-info p:nth-child(2) {
+  font-size: 14px;
+  color: var(--gray-500-text);
+}
+
+/* --- search bar ---- */
+.search-filter-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0px;
+}
+.search-bar {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  height: 35px;
+  border: 1px solid #d8d8e2;
+}
+.search-bar img {
+  width: 15px;
+  height: 15px;
+  margin: 0px 13px;
+  cursor: text;
+}
+.search-bar input {
+  border: none;
+  outline: none;
+  /*  the background-color: transparent; we apply here, transparent makes the background color of it parent visible */
+  background-color: transparent;
+  width: 100%;
+}
+.search-bar-focus {
+  border: 2.5px solid rgb(133, 168, 168);
+}
+.search-bar .close-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* ---- add task button ----*/
+.add-task-btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-task-icon-btn {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: none;
+}
+.add-task-btn {
+  padding: 6px 10px;
+  border-radius: 5px;
+  color: var(--primary-color);
+}
+.add-task-btn:hover {
+  background-color: #d8d8e2;
+}
+
+/* Clear selected items */
+.search-box {
+  width: fit-content;
+  margin: 30px auto;
+}
+
+.searched-list {
+  font-size: 14px;
+}
+.clear-selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  background-color: #f8f7f7;
+  margin: 20px 0px;
+  border-radius: 5px;
+  padding: 0px 10px;
+}
+.clear-selected img {
+  cursor: pointer;
+}
+
+/* category filter buttons */
+.filter-by-category {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-btn-active {
+  background-color: rgb(204, 230, 230);
+  color: teal;
+}
+.filter-btn {
+  border-radius: 5px;
+  padding: 3px 10px;
+}
+
+/* More Filter button */
+
+.more-filter {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border: var(--pr-border);
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  gap: 0 10px;
+}
+.more-filter:hover {
+  border-color: teal;
+}
+
+/* Date table */
+.task-table {
+  width: 100%;
+  border-spacing: 0px;
+}
+.add-bg:hover {
+  background-color: #f8f7f7;
+}
+.task-table input[type='checkbox'] {
+  cursor: pointer;
+}
+.selectedTask {
+  width: 15px;
+  height: 14px;
+}
+.checked {
+  background-color: var(--primary-color);
+}
+th {
+  background-color: #f2f0f0;
+  text-align: left;
+  height: 45px;
+  font-size: 15px;
+}
+td {
+  border-bottom: var(--pr-border);
+  color: var(--gray-500-text);
+}
+
+td,
+th {
+  padding: 4px 10px;
+}
+.sort-order {
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.5s ease 0s;
+}
+
+.rotate180 {
+  transform: rotate(180deg);
+  transition: all 0.5s ease 0s;
+}
+
+.status,
+.priority {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 6px;
+  border-radius: 50px;
+  font-size: 12px;
+  width: fit-content;
+}
+
+.ellipse-btn {
+  font-size: 25px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.drop-down-btn {
+  position: relative;
+}
+.drop-down-btn ul {
+  width: 170px;
+  position: absolute;
+  list-style-type: none;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  top: 35px;
+  overflow: hidden;
+  background-color: white;
+  z-index: 3;
+}
+.drop-down-btn li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 10px;
+  cursor: pointer;
+  color: black;
+}
+.drop-down-btn li:hover {
+  background-color: rgb(244, 244, 244);
+  color: teal;
+}
+.drop-down-btn img {
+  width: 10px;
+  height: 10px;
+  margin: 0 10px 0 0px;
+}
+.drop-down-btn .delete {
+  color: tomato;
+}
+.dropdown-icon {
+  display: inline-block;
+  margin-left: 0px 10px;
+}
+/* data table mobile view */
+.mobile-view-cards {
+  display: none;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+/* -- Empty State -- */
+.empty-state {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty-state h4 {
+  font-size: 20px;
+}
+.empty-state > div {
+  text-align: center;
+  margin: 20px;
+}
+.empty-state img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.empty-state p {
+  color: var(--gray-500-text);
+}
+
+/* -- Pagination --  */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 15px 10px;
+  font-size: 15px;
+}
+.pagination button {
+  all: unset;
+  color: var(--gray-600-text-color);
+  cursor: pointer;
+}
+
+.selectPage {
+  border: none;
+  outline: none;
+  border: var(--pr-border);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0 30px;
+  cursor: pointer;
+}
+
+@media (width< 1200px) {
+  .search-bar {
+    height: 30px;
+  }
+  td,
+  th {
+    padding: 4px;
+  }
+  td {
+    font-size: 14px;
+  }
+  .priority,
+  .status {
+    font-size: 9px;
+  }
+}
+
+@media (width< 750px) {
+  .page-width {
+    width: 90%;
+  }
+  .user-info p:nth-child(1) {
+    font-size: 18px;
+  }
+  .user-info p:nth-child(2) {
+    font-size: 12px;
+  }
+  .search-bar {
+    width: 75%;
+  }
+
+  /* -- category filter  */
+  .filter-btn {
+    font-size: 11px;
+  }
+  .more-filter img {
+    width: 15px;
+    height: 15px;
+  }
+  .more-filter img:nth-child(3) {
+    display: none;
+  }
+
+  /*  table */
+  .task-table {
+    display: none !important;
+  }
+  .mobile-view-cards {
+    display: block;
+  }
+  .add-task-icon-btn {
+    display: block;
+  }
+  .add-task-btn {
+    display: none;
+  }
+  .pagination {
+    font-size: 13px;
+    padding: 20px 0px;
+  }
+
+  .selectPage {
+    font-size: 10px;
+    margin: 0 10px;
+  }
+}

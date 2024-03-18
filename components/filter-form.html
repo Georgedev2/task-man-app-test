@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+      :root {
+        --pr-border: 1px solid #ecedee;
+        --input-height: 35px;
+        --primary-color: teal;
+        --primary-border-radius: 4px;
+        --gray-500-text: #75757a;
+      }
+      * {
+        font-family: 'Nunito', sans-serif;
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+
+      .filter-form {
+        margin-bottom: 20px;
+      }
+      .filter-group {
+        margin-bottom: 20px;
+      }
+      button {
+        border: none;
+        border: var(--pr-border);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .filter-btn {
+        border-radius: 50px;
+        padding: 3px 10px;
+      }
+      .filter-btn-title {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="filter-form">
+      <div class="filter-group">
+        <h5 class="filter-btn-title">Filter by status</h5>
+        <button class="filter-btn">All</button>
+        <button class="filter-btn">Done</button>
+        <button class="filter-btn">In progress</button>
+        <button class="filter-btn">Todo</button>
+      </div>
+      <div>
+        <h5 class="filter-btn-title">Filter by priority</h5>
+        <button class="filter-btn">High</button>
+        <button class="filter-btn">Medium</button>
+        <button class="filter-btn">Low</button>
+      </div>
+
+      <div>
+        <h5 class="filter-btn-title">Filter by time</h5>
+        <button class="filter-btn">24 hour</button>
+        <button class="filter-btn">one week</button>
+        <button class="filter-btn">one month</button>
+      </div>
+      <script>
+        // MORE FILTER MODAL
+        // moreFilterButton.addEventListener('click', (e) => {
+        //   e.preventDefault();
+
+        //   const category = document.createElement('div');
+        //   category.innerHTML = `<h5 class="filter-btn-title">Filter by status</h5>`;
+        //   priorityList.forEach((label) => {
+        //     category.innerHTML += `<button class="filter-btn">${label}</button>`;
+        //   });
+
+        //   const status = document.createElement('div');
+        //   status.innerHTML = `<h5 class="filter-btn-title">Filter by priority</h5>`;
+        //   statusList.forEach((label) => {
+        //     status.innerHTML += `<button class="filter-btn">${label}</button>`;
+        //   });
+        //   const form = document.createElement('form');
+
+        //   form.appendChild(category);
+        //   form.appendChild(status);
+        //   const clearBtn = document.createElement('button');
+        //   clearBtn.innerHTML = 'Clear Filter';
+        //   form.appendChild(clearBtn);
+
+        //   modal(form, 'Filter Form').show(true);
+        // });
+      </script>
+    </form>
+  </body>
+</html>

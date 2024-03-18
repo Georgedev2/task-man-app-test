@@ -1,0 +1,70 @@
+.add-task-form {
+  max-width: 450px;
+}
+.add-task-form button {
+  border: none;
+  cursor: pointer;
+}
+.add-task-form label {
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.status-btn,
+.priority-btn {
+  width: fit-content;
+  padding: 2px 5px;
+  border-radius: 5px;
+  background-color: #f2f0f0;
+}
+
+.add-task-form textarea {
+  width: 100%;
+  outline: none;
+  border: var(--pr-border);
+  border-radius: 5px;
+  padding: 10px;
+}
+.add-task-form textarea:focus {
+  border: 1.5px solid var(--primary-color);
+}
+
+.input-box {
+  margin-top: 20px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 35px;
+  border: var(--pr-border);
+  padding: 0px 10px;
+}
+.add-task-form .add-task-btn {
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  color: whitesmoke;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgb(210, 208, 208);
+  transition: transform 0.5ms ease-in-out;
+}
+.add-task-btn:hover {
+  transform: scale(0.99);
+}
+.button-wrapper {
+  margin-top: 10px;
+}
+/* --- Active state classes --- */
+.add-task-form-btn-active {
+  background-color: rgb(204, 230, 230);
+  color: teal;
+  box-shadow: 1px 1px 5px rgb(210, 208, 208);
+}
+
+.date:focus {
+  outline-color: var(--primary-color);
+}

@@ -1,0 +1,20 @@
+----TODO----
+work on next button DONE
+work on sort
+work on task time
+implement checkbox functionalities
+implement delete & edit task
+implement header
+fix empty state bug
+fix add button bug on mobile view
+
+work on the add task function by linking with back end
+work on the more filter
+delete multiple items, delete single items,
+work on edit function
+on hover show delete icon, ask if the person wants to delete before any action
+show feedback that item has been added or deleted or updated
+work on the time on mobile view
+add button on mobile view
+improve the sort animation
+show task detail modal

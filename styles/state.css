@@ -1,0 +1,35 @@
+.done {
+    background-color: rgb(204, 230, 230);
+    color: teal;
+  }
+  .inprogress {
+    background-color: #f4e9df;
+    color: #f68b1e;
+  }
+  .todo {
+    color: rgb(210, 53, 210);
+    background-color: rgb(246, 209, 246);
+  }
+  
+  .high {
+    color: tomato;
+    background-color: rgb(248, 207, 199);
+  }
+  .medium {
+    color: cornflowerblue;
+    background-color: rgb(215, 225, 246);
+  }
+  .low {
+    background-color:rgb(246, 230, 201);
+    color:orange;
+  }
+
+  .onhold{
+    color:rgb(193, 93, 143);
+    background-color:rgb(246, 219, 232);
+  }
+  .error{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #f33e1e;
+  }

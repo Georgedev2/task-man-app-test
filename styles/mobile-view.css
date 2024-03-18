@@ -1,0 +1,63 @@
+.tag-color {
+  background-color: rgb(204, 230, 230);
+  color: teal;
+}
+
+.task-card {
+  border-radius: 5px;
+  border: var(--pr-border);
+  width: 100%;
+  margin-bottom: 16px;
+  position: relative;
+  padding: 5px 10px;
+  background-color: white;
+}
+.box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.paragraph-bd{
+    width: 100%;
+}
+.task-card p {
+  width: 97%;
+  line-height: 18px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.date {
+  margin-top: 5px;
+  display: flex;
+  font-size: 12px;
+  color:var(  --gray-500-text);
+}
+.date > img + p {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.three-dots {
+  position: absolute;
+  font-size: 20px;
+  font-weight: 700;
+  right: 10px;
+  bottom: 0px;
+  cursor: pointer;
+}
+.tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 5px;
+  border-radius: 2px;
+  padding: 1px 6px;
+  font-size: 9px;
+}
+
+.flex-with-align {
+  display: flex;
+  align-items: center;
+}

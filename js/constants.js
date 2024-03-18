@@ -1,0 +1,15 @@
+export const ALL = 'all';
+export const DONE = 'Done';
+export const IN_PROGRESS = 'In progress';
+export const ON_HOLD='On Hold'
+export const TODO = 'Todo';
+export const HIGH = 'High';
+export const LOW = 'Low';
+export const MEDIUM = 'Medium';
+export const DESC='desc';
+export const ASC='asc';
+export const SORT_DATE = 'sortDate';
+export const DATE = 'date';
+export const status=[ALL, IN_PROGRESS]
+export const priority = [HIGH, LOW, MEDIUM, TODO,DONE ];
+export const PER_PAGE=10
