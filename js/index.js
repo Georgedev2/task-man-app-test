@@ -106,6 +106,7 @@ document.addEventListener('click', (e) => {
     searchClearIcon.style.display = 'none';
   }
 });
+
 // SEARCH INPUT
 searchInput.addEventListener('input', (e) => {
   const paginatedData = paginate(pageCount.pageNumber, data.taskList);
